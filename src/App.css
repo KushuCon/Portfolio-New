@@ -1,0 +1,192 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.morse-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.morse-element,
+.math-element,
+.code-element {
+  color: rgba(200, 200, 200, 0.35); /* Increased opacity from 0.15 to 0.35 */
+  font-size: 1.5rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  user-select: none;
+  white-space: pre;
+  opacity: 0.7; /* Increased from 0 to 0.7 */
+  animation: fadeInOut 10s linear infinite;
+  transition: opacity 0.5s;
+}
+
+.morse-element {
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+}
+
+.math-element {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.code-element {
+  font-size: 1.3rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.3; }      /* Increased from 0 to 0.3 */
+  10% { opacity: 0.7; }     /* Increased from 0.3 to 0.7 */
+  50% { opacity: 0.5; }     /* Increased from 0.15 to 0.5 */
+  90% { opacity: 0.7; }     /* Increased from 0.3 to 0.7 */
+  100% { opacity: 0.3; }    /* Increased from 0 to 0.3 */
+}
+
+/* ...existing code... */
+
+.move-right {
+  left: -35vw;
+  animation: moveRight 18s linear infinite;
+}
+
+.move-left {
+  right: -35vw;
+  animation: moveLeft 18s linear infinite;
+}
+
+@keyframes moveRight {
+  0% { left: -35vw; }
+  100% { left: 110vw; }
+}
+
+@keyframes moveLeft {
+  0% { right: -35vw; }
+  100% { right: 110vw; }
+}
+
+/* Increase opacity for background elements */
+.morse-element,
+.math-element,
+.code-element {
+  color: rgba(200, 200, 200, 0.35);
+  font-size: 1.5rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  user-select: none;
+  white-space: pre;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+.morse-element {
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+}
+
+.math-element {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.code-element {
+  font-size: 1.3rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* ...existing code... */
+
+.marquee-right {
+  left: -100vw;
+  animation: marqueeRight 40s linear infinite;
+}
+
+.marquee-left {
+  right: -100vw;
+  animation: marqueeLeft 40s linear infinite;
+}
+
+@keyframes marqueeRight {
+  0% { left: -100vw; }
+  100% { left: 100vw; }
+}
+
+@keyframes marqueeLeft {
+  0% { right: -100vw; }
+  100% { right: 100vw; }
+}
+
+/* Add to your index.css */
+.marquee-container {
+  display: inline-block;
+  min-width: 200vw; /* Ensures enough width for seamless repeat */
+}
+
+.marquee-right {
+  left: 0;
+  animation: marqueeRight 40s linear infinite;
+}
+
+.marquee-left {
+  right: 0;
+  animation: marqueeLeft 40s linear infinite;
+}
+
+@keyframes marqueeRight {
+  0% { left: 0; }
+  100% { left: -100vw; }
+}
+
+@keyframes marqueeLeft {
+  0% { right: 0; }
+  100% { right: -100vw; }
+}
+
+.marquee-symbol {
+  margin: 0 2.5rem; /* Increase horizontal gap between symbols/equations */
+  display: inline-block;
+}
